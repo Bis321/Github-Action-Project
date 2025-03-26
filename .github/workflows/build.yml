@@ -1,7 +1,10 @@
+name: Node continuous Integeration 
 on: push
 jobs:
-    first-job:
+    build-node:
+        name: Build Node
         runs-on: ubuntu-latest
+        container: node:14
         steps:
             - run : node --version
             - run : npm --version
